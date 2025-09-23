@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3: Email Attachments - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 3 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 3</div>
+                <h2>📎 Email Attachments</h2>
+            </div>
+            
+            <div class="question">
+                Someone you don't know sent you an email with a file called "FreeGame.exe". What should you do?
+            </div>
+            
+            <div class="email-example" style="
+                background: #ffebee;
+                border: 3px solid #f44336;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="background: #ffcdd2; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+                    <strong>From:</strong> unknown.sender@email.com<br>
+                    <strong>To:</strong> you@email.com<br>
+                    <strong>Subject:</strong> Free Game for You!
+                </div>
+                
+                <div style="padding: 1rem; background: white; border-radius: 5px; margin-bottom: 1rem;">
+                    <p>Hi!</p>
+                    <p>I found this cool free game and thought you might like it!</p>
+                    <p>Just download and run the file to play!</p>
+                    <p>Have fun!</p>
+                </div>
+                
+                <div style="background: #ffcdd2; padding: 1rem; border-radius: 5px; border: 2px dashed #f44336; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📎</div>
+                    <strong style="color: #c62828;">📁 FreeGame.exe</strong><br>
+                    <small style="color: #666;">File size: 2.5 MB</small><br><br>
+                    <button style="background: #f44336; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;" onclick="simulateMaliciousWebsite()">
+                        ⬇️ Download File
+                    </button>
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    📥 Download the file - it sounds fun!
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🚫 Delete the email and don't open it
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🔍 Ask a grown-up what to do
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Great job! Deleting the email is the safe thing to do! Here\'s why:<br><br>🚫 NEVER take files from strangers:<br>🦠 Files ending in &quot;.exe&quot; can have bad stuff in them<br>💻 They can break your computer or steal your things<br>🎭 Bad people pretend files are games when they\'re not<br>📧 Don\'t trust people you don\'t know<br><br>✅ How to be safe with files:<br>🤔 Only take files from people you know<br>🛡️ Be extra careful with &quot;.exe&quot; files<br>👨‍👩‍👧‍👦 Ask a grown-up before downloading anything<br>🔍 Let grown-ups check files first<br><br>Remember: If you don\'t know who sent it, don\'t take it!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz4.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz2.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz4.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 2;
+    </script>
+</body>
+</html>

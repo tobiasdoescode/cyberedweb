@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1: Spotting Fake Emails - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 1 out of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 1</div>
+                <h2>📧 Spotting Fake Emails</h2>
+            </div>
+            
+            <div class="question">
+                Yikes! This email looks pretty scary. What's your next move?
+            </div>
+            
+            <div class="visual-email-card">
+                <div class="email-header">
+                    <div class="email-from">📧 From: security@yourbankk.com</div>
+                    <div class="email-subject">⚠️ URGENT: Your account will be closed!</div>
+                </div>
+                <div class="email-content">
+                    <div class="warning-icon">🚨</div>
+                    <div class="email-text">
+                        Your bank account will be CLOSED!
+                        <br>
+                        Click here RIGHT NOW!
+                    </div>
+                    <div class="suspicious-link">🔗 www.fake-bank-site.com/verify</div>
+                </div>
+            </div>
+            
+            <div class="quick-tips">
+                <div class="tip-icon">💡</div>
+                <div class="tip-text">
+                    <strong>Watch out for:</strong> Scary words, rushing you, weird links
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    📧 Click the link - the bank needs me!
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🚫 Delete it and tell someone
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    📱 Forward it to my friends
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Nice one! You totally nailed it!<br><br>🚫 Real banks don\'t send scary emails like this<br>🏦 They\'re way nicer and actually call you<br>👨‍👩‍👧‍👦 Always smart to check with someone you trust<br><br>🛡️ Quick safety tip: If it freaks you out or says "hurry up!", it\'s probably sketchy!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz2.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz2.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <style>
+        .visual-email-card {
+            background: #fff3e0;
+            border: 3px solid #ff9800;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .email-header {
+            background: #ffcc80;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .email-from {
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+        }
+        
+        .email-subject {
+            color: #c62828;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .email-content {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .warning-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .email-text {
+            font-size: 1.1rem;
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .suspicious-link {
+            background: #ffebee;
+            border: 2px dashed #f44336;
+            border-radius: 8px;
+            padding: 0.5rem;
+            font-family: monospace;
+            color: #c62828;
+            font-size: 0.9rem;
+        }
+        
+        .quick-tips {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .tip-icon {
+            font-size: 1.5rem;
+        }
+        
+        .tip-text {
+            color: #1565c0;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .visual-email-card {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+            
+            .email-text {
+                font-size: 1rem;
+            }
+            
+            .quick-tips {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 0;
+    </script>
+</body>
+</html>

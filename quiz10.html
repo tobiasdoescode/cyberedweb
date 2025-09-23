@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10: Personal Information - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Keep Your Information Safe</h1>
+        <p>Question 10 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 10</div>
+                <h2>🔒 Keep Your Information Safe</h2>
+            </div>
+            
+            <div class="question">
+                You want to take a fun quiz online called "What's Your Dream Job?". What information is OK to share?
+            </div>
+            
+            <div class="quiz-example" style="
+                background: #fff3e0;
+                border: 3px solid #ff9800;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📝</div>
+                    <strong style="color: #e65100; font-size: 1.2rem;">Online Quiz: "What's Your Dream Job?"</strong>
+                </div>
+                
+                <div style="background: white; padding: 1rem; border-radius: 5px; border: 2px solid #ffb74d;">
+                    <div style="margin-bottom: 1rem;">
+                        <strong style="color: #e65100;">The quiz asks for:</strong>
+                    </div>
+                    
+                    <div style="display: grid; gap: 1rem;">
+                        <!-- Option A -->
+                        <div style="background: #ffebee; padding: 1rem; border-radius: 5px; border-left: 4px solid #f44336;">
+                            <div style="font-size: 1.2rem; margin-bottom: 0.5rem;">❌ Option A:</div>
+                            <div style="color: #c62828; font-weight: bold;">Your full name, home address, and phone number</div>
+                        </div>
+                        
+                        <!-- Option B -->
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 5px; border-left: 4px solid #4caf50;">
+                            <div style="font-size: 1.2rem; margin-bottom: 0.5rem;">✅ Option B:</div>
+                            <div style="color: #2e7d32; font-weight: bold;">Your favorite school subjects and hobbies</div>
+                        </div>
+                        
+                        <!-- Option C -->
+                        <div style="background: #ffebee; padding: 1rem; border-radius: 5px; border-left: 4px solid #f44336;">
+                            <div style="font-size: 1.2rem; margin-bottom: 0.5rem;">❌ Option C:</div>
+                            <div style="color: #c62828; font-weight: bold;">Your social security number and birthday</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="
+                background: #e3f2fd;
+                border: 3px solid #2196f3;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💡</div>
+                <strong style="color: #1565c0;">Remember: Keep Your Information Safe</strong>
+                <p style="color: #1976d2; margin: 0.5rem 0; font-size: 0.95rem;">
+                    NEVER tell strangers information that could help them find you or hurt you!
+                </p>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    📍 Your full name, where you live, and your phone number
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    📚 Your favorite things to learn and fun things you like to do
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🆔 Your special ID number and when you were born
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Good job! Sharing things you like is safe! Here\'s why:<br><br>✅ OK to share:<br>🎨 Things you like to learn (art, math, science)<br>⚽ Fun things you do (sports, reading, games)<br>🎵 Things you enjoy (music, movies, books)<br>💭 What you think about things<br><br>❌ NEVER share:<br>🏠 Where you live or your school name<br>📞 Your phone number<br>🆔 Your full name or special ID number<br>🎂 When you were born<br>💳 Your passwords<br><br>Remember: It\'s OK to talk about things you like, but keep your personal information safe!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz11.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz9.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz11.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 9;
+    </script>
+</body>
+</html>

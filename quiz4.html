@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4: Social Media Privacy - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 4 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 4</div>
+                <h2>📱 Social Media Privacy</h2>
+            </div>
+            
+            <div class="question">
+                You're making a new social media account. How should you set up your privacy?
+            </div>
+            
+            <div class="social-media-example" style="
+                background: #e8f5e8;
+                border: 3px solid #4caf50;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                    <strong style="color: #2e7d32; font-size: 1.2rem;">Your New Social Media Account</strong>
+                </div>
+                
+                <div style="background: white; padding: 1rem; border-radius: 5px; border: 2px solid #81c784;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #bbdefb; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 1.5rem;">👤</div>
+                        <div>
+                            <strong>Your Name</strong><br>
+                            <small style="color: #666;">Just joined today!</small>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+                        <strong>⚙️ Privacy Settings</strong><br><br>
+                        <div style="margin-bottom: 0.5rem;">👥 Who can see your posts: <span style="color: #f44336; font-weight: bold;">Everyone (Public)</span></div>
+                        <div style="margin-bottom: 0.5rem;">📞 Who can see your phone number: <span style="color: #f44336; font-weight: bold;">Everyone</span></div>
+                        <div style="margin-bottom: 0.5rem;">📍 Who can see your location: <span style="color: #f44336; font-weight: bold;">Everyone</span></div>
+                        <div>👫 Who can send friend requests: <span style="color: #f44336; font-weight: bold;">Anyone</span></div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button style="background: #2196f3; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                            ⚙️ Change Privacy Settings
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    🌍 Make everything public so more people can see me
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🔒 Keep everything private and only add people I know
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🤷 I don't need to change anything - the default settings are fine
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Great job! Keeping everything private is the safest choice! Here\'s why:<br><br>🔒 PRIVATE KEEPS YOU SAFE:<br>👥 Only people you say yes to can see your stuff<br>📸 Your pictures and information stay safe<br>🏠 Strangers can\'t find out where you are<br>🛡️ Bad people can\'t be mean to you as easily<br><br>✅ How to be smart on social media:<br>🤔 Think before you post - do you want everyone to see this?<br>👨‍👩‍👧‍👦 Only add people you know in real life<br>📍 Don\'t let apps know where you are<br>🔍 Ask a grown-up to help check your settings<br><br>Remember: You can always share more later, but you can\'t take back what you already shared!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz5.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz3.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz5.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 3;
+    </script>
+</body>
+</html>

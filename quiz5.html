@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5: Sharing Photos - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 5 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 5</div>
+                <h2>📸 Sharing Photos</h2>
+            </div>
+            
+            <div class="question">
+                Your friend wants to post a picture of you both at the mall. What should you think about?
+            </div>
+            
+            <div style="
+                background: #fff3e0;
+                border: 3px solid #ff9800;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📱</div>
+                <strong style="color: #e65100; font-size: 1.2rem;">Sharing Pictures</strong>
+                <div style="
+                    background: #ffcc80;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    text-align: left;
+                ">
+                    <div style="color: #d32f2f; font-size: 1rem;">
+                        "Hey! I took a great picture of us at the mall today. I want to post it and say where we were. You look great!"
+                    </div>
+                    <div style="margin-top: 1rem; padding: 0.5rem; background: #ffab91; border-radius: 5px;">
+                        <strong style="color: #c62828;">THINGS TO WORRY ABOUT:</strong>
+                        <div style="color: #d32f2f; font-size: 0.9rem; margin-top: 0.5rem;">
+                            • Shows where you were • Your picture shared without asking • Stays on the internet forever
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="
+                background: #e3f2fd;
+                border: 3px solid #2196f3;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💭</div>
+                <strong style="color: #1565c0;">Remember: You Choose About Your Pictures!</strong>
+                <p style="color: #1976d2; margin: 0.5rem 0; font-size: 0.95rem;">
+                    You get to decide if your pictures can be shared online.
+                </p>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    👍 Say "Sure, go ahead and post it!"
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🤔 Ask them to post it but don't say where we were
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🚫 Ask them not to post it because I want to keep it private
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Great thinking! Asking them not to say where you were is very smart! Here\'s why:<br><br>🎯 KEEPING WHERE YOU GO PRIVATE IS IMPORTANT:<br>📍 Saying where you were can help strangers find you<br>🕐 It shows when and where you were<br>🎭 Bad people can use this to follow you<br>🏠 It can show where you like to go<br><br>✅ How to be smart about sharing pictures:<br>🤝 Always ask before posting pictures of others<br>📍 Don\'t say where the picture was taken<br>🤔 Think about who can see the picture<br>⏰ Wait to post pictures until after you leave<br><br>Remember: It\'s always okay to ask friends to keep your private things private!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz6.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz4.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz6.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 4;
+    </script>
+</body>
+</html>

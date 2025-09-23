@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 12: Online Strangers - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz 12: What You Share Online Stays Online</h1>
+        <p>You want a job. The boss says they looked at your social media pages. What does this teach you about what you share online?</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 12</div>
+                <h2>📱 What You Share Online</h2>
+            </div>
+            
+            <div class="question">
+                You want a job. The boss says they looked at your social media pages. What does this teach you about what you share online?
+            </div>
+            
+            <div class="message-example" style="
+                background: #fff3e0;
+                border: 3px solid #ff9800;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                    <strong style="color: #e65100; font-size: 1.2rem;">WHAT HAPPENS WHEN YOU SHARE:</strong>
+                </div>
+                
+                <div style="background: white; padding: 1rem; border-radius: 5px; border: 2px solid #ffb74d;">
+                    <div style="background: #e3f2fd; padding: 1rem; border-radius: 5px; border-left: 4px solid #2196f3; margin-bottom: 1rem;">
+                        <div style="color: #1976d2; font-size: 1rem;">
+                            • Everything you put online can be seen by people who might give you a job<br>
+                            • What you share online stays there forever<br>
+                            • Even private settings don't always keep things private<br>
+                            • Think before you share - would you be OK if anyone saw this?
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="
+                background: #e3f2fd;
+                border: 3px solid #2196f3;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💡</div>
+                <strong style="color: #1565c0;">Remember: What You Share Online Matters!</strong>
+                <p style="color: #1976d2; margin: 0.5rem 0; font-size: 0.95rem;">
+                    Everything you put online stays there forever. Always think before you share!
+                </p>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    🤷 It doesn't matter because my pages are private
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    ✅ I should be careful about what I share because it can affect my future
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🗑️ I should delete all my social media accounts right now
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Perfect! What you share online stays there forever and can affect your future. Always think before sharing: Would I be OK if my family, teachers, or future bosses saw this? Keep a good online presence by sharing nice things, being kind in comments, and checking your privacy settings often.<br><br>🎉 Congratulations! You&apos;ve completed all 12 questions and learned how to stay safe online!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="showCompletion()" style="display: none;">
+                🎉 Complete Quiz!
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz11.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="showCompletion()" id="skipBtn">Complete Quiz 🎉</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 11;
+        
+        function showCompletion() {
+            // Show completion popup
+            showPopup(
+                '🎉 Congratulations! Quiz Complete! 🎉',
+                'Amazing work! You have successfully completed all 12 questions about staying safe online!<br><br>' +
+                '🛡️ You now know how to:<br>' +
+                '• Spot fake emails and phishing attempts<br>' +
+                '• Keep your social media accounts private and safe<br>' +
+                '• Create strong passwords and use two-factor authentication<br>' +
+                '• Protect your personal information online<br>' +
+                '• Browse websites safely<br>' +
+                '• Stay safe from online strangers<br><br>' +
+                '🌟 You are now a Cybersecurity Champion!<br><br>' +
+                '💙 Remember: Always ask a trusted adult if you&apos;re unsure about something online. You did great!',
+                function() {
+                    window.location.href = 'index.html';
+                }
+            );
+        }
+    </script>
+</body>
+</html>

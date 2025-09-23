@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2: Email Links - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 2 out of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 2</div>
+                <h2>🔗 Email Links</h2>
+            </div>
+            
+            <div class="question">
+                Your buddy just sent you a link. Should you click it?
+            </div>
+            
+            <div class="visual-link-card">
+                <div class="email-preview">
+                    <div class="email-icon">💰</div>
+                    <div class="email-title">Email from Your Friend</div>
+                </div>
+                <div class="link-preview">
+                    <div class="link-icon">🔗</div>
+                    <div class="link-text">http://win-money-now.bad-site.com</div>
+                </div>
+            <div class="warning-box">
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-text">
+                        <strong>Something's fishy:</strong> Money promises, weird links, rushing you
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-tip">
+                <div class="tip-icon">💡</div>
+                <div class="tip-text">
+                    Even friends share bad links sometimes!
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    ✅ Sure - my buddy wouldn't trick me
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🚫 Nah - this looks sketchy
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    📱 Better ask someone first
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Smart move! You totally get it!<br><br>🚩 Here\'s what\'s wrong with this link:<br>💰 Nobody gives away money for clicking<br>⏰ Real sites don\'t rush you like this<br>🌐 That website name is super weird<br><br>✅ Your safety game plan:<br>🤔 If it sounds too good to be true, it probably is<br>🔍 Weird links = instant red flag<br>👨‍👩‍👧‍👦 When in doubt, check with someone<br>📞 Ask your friend if they actually sent it<br><br>Remember: Even your bestie might accidentally share something bad!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz3.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz1.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz3.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <style>
+        .visual-link-card {
+            background: #fff3e0;
+            border: 3px solid #ff9800;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .email-preview {
+            background: #ffcc80;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .email-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .email-title {
+            color: #e65100;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .link-preview {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px dashed #f44336;
+        }
+        
+        .link-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .link-text {
+            font-family: monospace;
+            color: #c62828;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+        
+        .warning-box {
+            background: #ffebee;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .warning-icon {
+            font-size: 1.2rem;
+        }
+        
+        .warning-text {
+            color: #c62828;
+            font-size: 0.9rem;
+        }
+        
+        .quick-tip {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .tip-icon {
+            font-size: 1.5rem;
+        }
+        
+        .tip-text {
+            color: #1565c0;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .visual-link-card {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+            
+            .warning-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .quick-tip {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 1;
+    </script>
+</body>
+</html>

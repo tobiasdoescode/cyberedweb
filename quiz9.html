@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9: Two-Factor Authentication - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 9 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 9</div>
+                <h2>🔐 Two-Factor Authentication</h2>
+            </div>
+            
+            <div class="question">
+                You use the same password "MyFavoriteColor123" for your email, social media, and games. Is this a good idea?
+            </div>
+            
+            <div class="password-reuse-example" style="
+                background: #ffebee;
+                border: 3px solid #f44336;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚠️</div>
+                    <strong style="color: #e65100; font-size: 1.2rem;">Using the Same Password</strong>
+                </div>
+                
+                <div style="background: white; padding: 1rem; border-radius: 5px; border: 2px solid #ef5350;">
+                    <div style="color: #d32f2f; font-size: 1rem;">
+                        "I use 'MyFavoriteColor123' for everything - my email, Instagram, TikTok, and my games. It's so much easier to remember just one password!"
+                    </div>
+                    
+                    <div style="background: #ffcdd2; padding: 1rem; border-radius: 5px; text-align: center; margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💥</div>
+                        <strong style="color: #c62828;">BIG DANGER:</strong>
+                        <div style="color: #d32f2f; font-size: 0.9rem; margin-top: 0.5rem;">
+                            • If one gets hacked, they all get hacked • Bad people get into everything • All your stuff gets stolen
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="
+                background: #e3f2fd;
+                border: 3px solid #2196f3;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💡</div>
+                <strong style="color: #1565c0;">Remember: Different Passwords for Each Thing!</strong>
+                <p style="color: #1976d2; margin: 0.5rem 0; font-size: 0.95rem;">
+                    Using different passwords keeps you safe if one account gets hacked.
+                </p>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    ✅ Yes, this is smart - one password is easier to remember
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🚫 No, this is dangerous - I should use different passwords for each thing
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🤔 It's okay as long as the password is strong
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'You\'re right! Using the same password everywhere is very dangerous! Here\'s why:<br><br>🚨 THE DOMINO EFFECT:<br>💥 If bad people figure out your password on ONE place, they can get into ALL your accounts<br>🔓 Games, social media, email - everything becomes unsafe<br>📧 They could read your private messages and emails<br>💳 Getting into your email means they can reset passwords for other things<br><br>✅ Better way to do passwords:<br>🔐 Use a different password for each important account<br>📝 Write them down in a safe place or ask a grown-up to help<br>🎯 Make sure email, banking, and social media have different passwords<br>🔄 Think of a pattern you can remember but others can\'t guess<br><br>💡 Memory tip: Make a base password and add something different for each site<br>Example: MyDog2024!Gmail, MyDog2024!Insta, MyDog2024!Game<br><br>Remember: A little extra work now stops big problems later!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz10.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz8.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz10.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 8;
+    </script>
+</body>
+</html>

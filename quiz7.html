@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7: Strong Passwords - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 7 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 7</div>
+                <h2>🔒 Strong Passwords</h2>
+            </div>
+            
+            <div class="question">
+                You need to make a new password for your email. Which password is the safest?
+            </div>
+            
+            <div class="password-examples" style="
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin: 2rem 0;
+            ">
+                <!-- Weak Password -->
+                <div style="
+                    background: #ffebee;
+                    border: 3px solid #f44336;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    text-align: center;
+                ">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">❌</div>
+                    <strong style="color: #c62828;">Password A: WEAK</strong>
+                    <div style="
+                        background: #ffcdd2;
+                        border: 2px solid #f44336;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        margin: 1rem 0;
+                        font-family: monospace;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    ">123456</div>
+                    <small style="color: #666;">Only numbers, too short, easy to guess</small>
+                </div>
+                
+                <!-- Medium Password -->
+                <div style="
+                    background: #fff3e0;
+                    border: 3px solid #ff9800;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    text-align: center;
+                ">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚠️</div>
+                    <strong style="color: #e65100;">Password B: OKAY</strong>
+                    <div style="
+                        background: #ffecb3;
+                        border: 2px solid #ff9800;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        margin: 1rem 0;
+                        font-family: monospace;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    ">password</div>
+                    <small style="color: #666;">Real word, but everyone knows it and no numbers</small>
+                </div>
+                
+                <!-- Strong Password -->
+                <div style="
+                    background: #e8f5e8;
+                    border: 3px solid #4caf50;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    text-align: center;
+                ">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+                    <strong style="color: #2e7d32;">Password C: STRONG</strong>
+                    <div style="
+                        background: #c8e6c9;
+                        border: 2px solid #4caf50;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        margin: 1rem 0;
+                        font-family: monospace;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    ">MyDog2024!</div>
+                    <small style="color: #666;">Has letters, numbers, and symbols - hard to guess!</small>
+                </div>
+            </div>
+            
+            <div style="
+                background: #e3f2fd;
+                border: 3px solid #2196f3;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💡</div>
+                <strong style="color: #1565c0;">Remember: Good Passwords Keep You Safe!</strong>
+                <div style="text-align: left; margin-top: 1rem; color: #1976d2;">
+                    ✅ At least 8 letters long<br>
+                    ✅ Big and small letters<br>
+                    ✅ Numbers<br>
+                    ✅ Special symbols (like ! or @)<br>
+                    ✅ Not a word everyone knows or your name
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    ❌ Password A: "123456" - easy to remember
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    ⚠️ Password B: "password" - it's a word
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    ✅ Password C: "MyDog2024!" - has letters, numbers, and symbols
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(2, 'Great! Password C is the BEST! Here\'s why:<br><br>✅ It has big letters (M, D)<br>✅ It has small letters (y, o, g)<br>✅ It has numbers (2024)<br>✅ It has a special symbol (!)<br>✅ It\'s long enough to be safe<br>✅ It\'s not a word that bad people would guess<br><br>❌ Password A (123456) is terrible - lots of people use it!<br>❌ Password B (password) is also easy to guess<br><br>Remember: Good passwords keep bad people out of your stuff!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz8.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz6.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz8.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 6;
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 11: Safe Websites - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 11 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 11</div>
+                <h2>🌐 Safe Website Browsing</h2>
+            </div>
+            
+            <div class="question">
+                You want to download a fun game. You find three websites offering the same game. Which website looks SAFEST?
+            </div>
+            
+            <div class="website-examples" style="
+                background: #f5f5f5;
+                border: 3px solid #757575;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌐</div>
+                    <strong style="color: #424242; font-size: 1.2rem;">Three Websites Offering the Same Game</strong>
+                </div>
+                
+                <div style="display: grid; gap: 1rem;">
+                    <!-- Website A - Unsafe -->
+                    <div style="background: #ffebee; padding: 1rem; border-radius: 5px; border: 2px solid #f44336;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.2rem; margin-right: 0.5rem;">❌</span>
+                            <strong style="color: #c62828;">Website A:</strong>
+                        </div>
+                        <div style="background: white; padding: 0.8rem; border-radius: 3px; font-family: monospace; font-size: 0.9rem; color: #666;">
+                            🔓 http://free-games-download-now.sketchy-site.com<br>
+                            <span style="color: #f44336;">⚠️ "DOWNLOAD NOW! FREE GAMES! CLICK HERE!"</span><br>
+                            <span style="color: #f44336;">⚠️ Pop-ups everywhere, lots of ads</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Website B - Safe -->
+                    <div style="background: #e8f5e8; padding: 1rem; border-radius: 5px; border: 2px solid #4caf50;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.2rem; margin-right: 0.5rem;">✅</span>
+                            <strong style="color: #2e7d32;">Website B:</strong>
+                        </div>
+                        <div style="background: white; padding: 0.8rem; border-radius: 3px; font-family: monospace; font-size: 0.9rem; color: #666;">
+                            🔒 https://www.official-game-store.com<br>
+                            <span style="color: #4caf50;">✅ Clean design, clear information</span><br>
+                            <span style="color: #4caf50;">✅ Good reviews, secure payment</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Website C - Unsafe -->
+                    <div style="background: #ffebee; padding: 1rem; border-radius: 5px; border: 2px solid #f44336;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.2rem; margin-right: 0.5rem;">❌</span>
+                            <strong style="color: #c62828;">Website C:</strong>
+                        </div>
+                        <div style="background: white; padding: 0.8rem; border-radius: 3px; font-family: monospace; font-size: 0.9rem; color: #666;">
+                            🔓 http://get-games-free.random-numbers123.net<br>
+                            <span style="color: #f44336;">⚠️ "Win $1000! Enter your info!"</span><br>
+                            <span style="color: #f44336;">⚠️ Asks for personal information first</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="
+                background: #e3f2fd;
+                border: 3px solid #2196f3;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
+                text-align: center;
+            ">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💡</div>
+                <strong style="color: #1565c0;">Safe Website Signs:</strong>
+                <p style="color: #1976d2; margin: 0.5rem 0; font-size: 0.95rem;">
+                    🔒 Starts with "https://" • 🏢 Official company name • ✨ Clean, nice design • 📝 Good reviews
+                </p>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    🔓 Website A: free-games-download-now.sketchy-site.com
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🔒 Website B: www.official-game-store.com
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🔓 Website C: get-games-free.random-numbers123.net
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Great job! Website B is the safest choice! Here\'s how to find safe websites:<br><br>✅ SAFE website signs:<br>🔒 Website starts with &quot;https://&quot; (the &quot;s&quot; means safe)<br>🏢 Real company or store name<br>✨ Clean, nice design<br>📝 Good reviews from other people<br>💳 Safe ways to pay<br>📞 Phone number or email to contact them<br><br>❌ UNSAFE website warning signs:<br>🔓 Website starts with only &quot;http://&quot; (not safe)<br>⚠️ Too many pop-ups and flashy ads<br>🎰 Promises that seem too good to be true<br>📝 Asks for your personal information right away<br>🔤 Strange spelling or random numbers in website name<br><br>Always choose real stores and safe websites!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz12.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz10.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz12.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 10;
+    </script>
+</body>
+</html>

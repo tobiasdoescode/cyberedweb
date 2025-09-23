@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8: Password Sharing - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 8 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 8</div>
+                <h2>🤐 Password Sharing</h2>
+            </div>
+            
+            <div class="question">
+                Your best friend asks for your social media password so they can help you post something. What should you do?
+            </div>
+            
+            <div class="scenario-example" style="
+                background: #fff3e0;
+                border: 3px solid #ff9800;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+                    <strong style="color: #e65100; font-size: 1.2rem;">Friend Wants Your Password</strong>
+                </div>
+                
+                <div style="background: white; padding: 1rem; border-radius: 5px; border: 2px solid #ffb74d;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #bbdefb; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 1.5rem;">👤</div>
+                        <div>
+                            <strong>Your Best Friend</strong><br>
+                            <small style="color: #666;">Someone you trust</small>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 5px; font-style: italic; color: #333;">
+                        "Hey! Can you give me your Instagram password? I want to help you post that photo we took since you're busy. I promise I won't do anything else!"
+                    </div>
+                </div>
+                
+                <div style="
+                    background: #e3f2fd;
+                    border: 2px solid #2196f3;
+                    border-radius: 5px;
+                    padding: 1rem;
+                    margin-top: 1rem;
+                    text-align: center;
+                ">
+                    <strong style="color: #1565c0;">Remember: Never Give Away Your Password!</strong><br>
+                    <span style="color: #1976d2;">Your password is like a key to your stuff - keep it secret, even from friends.</span>
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    ✅ Give them my password - they're my best friend and I trust them
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🚫 Don't give my password, but I'll post it myself later
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🤔 Give them my password but ask them to change it back after
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Great choice! Never give your password away, even to best friends! Here\'s why:<br><br>🔐 PASSWORDS ARE YOURS ONLY:<br>🔑 Your password is like a house key - you wouldn\'t give that away<br>👤 Only YOU should get into your accounts<br>🛡️ Even good friends can accidentally mess things up<br>📱 You can always post it yourself when you have time<br><br>✅ Better ideas:<br>📝 Say you\'ll post it yourself later<br>📧 Send them the photo to post on their account<br>⏰ Wait until you have time to do it yourself<br>🤝 Tell them why you can\'t share passwords<br><br>❌ Why sharing is bad:<br>🎭 Friends might accidentally post something embarrassing<br>💔 It can hurt friendships if something goes wrong<br>🔓 Your account becomes less safe<br><br>Remember: Real friends will understand and respect your privacy!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz9.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz7.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz9.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 7;
+    </script>
+</body>
+</html>

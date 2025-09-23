@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6: Friend Requests - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🛡️ Stay Safe Online</h1>
+        <p>Question 6 of 12</p>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="question-number">Question 6</div>
+                <h2>👫 Friend Requests</h2>
+            </div>
+            
+            <div class="question">
+                Someone you don't know wants to be your friend on social media. They have some of the same friends as you. What should you do?
+            </div>
+            
+            <div class="friend-request-example" style="
+                background: #fff3e0;
+                border: 3px solid #ff9800;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            ">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                    <strong style="color: #e65100; font-size: 1.2rem;">Friend Request from a Stranger</strong>
+                </div>
+                
+                <div style="background: white; padding: 1rem; border-radius: 5px; border: 2px solid #ffb74d;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 60px; height: 60px; background: #ffcdd2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 2rem;">❓</div>
+                        <div>
+                            <strong style="color: #d84315;">Unknown Person</strong><br>
+                            <small style="color: #666;">0 mutual friends</small><br>
+                            <small style="color: #666;">No profile information</small>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+                        <strong style="color: #c62828;">WARNING SIGNS:</strong>
+                        <div style="color: #d32f2f; font-size: 0.9rem; margin-top: 0.5rem;">
+                            • You don't know them in real life • Could be a fake person • Your friends might not really know them
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; justify-content: center;">
+                        <button style="background: #4caf50; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                            ✅ Accept
+                        </button>
+                        <button style="background: #f44336; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                            ❌ Decline
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option" onclick="selectAnswer(this, 0)" tabindex="0" role="button">
+                    ✅ Accept the request - they seem nice and we have friends in common
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 1)" tabindex="0" role="button">
+                    🚫 Say no - I don't know them in real life
+                </div>
+                
+                <div class="option" onclick="selectAnswer(this, 2)" tabindex="0" role="button">
+                    🤔 Ask my friends if they really know this person
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" onclick="submitAnswer(1, 'Great choice! Saying no is the safest thing to do! Here\'s why:<br><br>🚫 DON\'T KNOW = DON\'T ADD:<br>👤 You don\'t know this person in real life<br>🎭 Fake people online can look real<br>👥 Having the same friends doesn\'t mean they\'re safe<br>🕵️ Bad people pretend to know your friends<br><br>✅ How to be safe with friend requests:<br>🤝 Only add people you\'ve met in real life<br>🔍 Be careful of people with few photos<br>👨‍👩‍👧‍👦 Ask your friends if they really know the person<br>🛡️ When you\'re not sure, say no - you can add them later if you meet<br><br>Remember: Only add people you really trust!')" disabled style="opacity: 0.5;">
+                Submit Answer
+            </button>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion('quiz7.html')" style="display: none;">
+                Next Question →
+            </button>
+            
+            <div class="navigation">
+                <button class="nav-btn" onclick="previousQuestion('quiz5.html')">← Previous</button>
+                <button class="nav-btn" onclick="goHome()">🏠 Home</button>
+                <button class="nav-btn" onclick="nextQuestion('quiz7.html')" id="skipBtn">Skip Question →</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Remember: When in doubt, ask for help! 💙</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        currentQuestion = 5;
+    </script>
+</body>
+</html>
