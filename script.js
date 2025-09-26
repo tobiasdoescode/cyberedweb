@@ -345,96 +345,104 @@ function createVoiceControlPanel() {
         background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
         border: 3px solid #2196f3;
         border-radius: 15px;
-        padding: 1rem;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         z-index: 1000;
-        min-width: 200px;
+        min-width: 220px;
+        user-select: none;
     `;
-    
+
     controlPanel.innerHTML = `
-        <div style="text-align: center; margin-bottom: 1rem;">
-            <h4 style="color: #1976d2; margin: 0; font-size: 1rem;">🔊 Voice Helper</h4>
+        <!-- HEADER BAR -->
+        <div id="voice-panel-header" style="
+            background: #2196f3;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 12px 12px 0 0;
+            cursor: move;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        ">
+            <span style="font-weight: bold;">🔊 Voice Helper</span>
+            <button id="minimize-btn" style="
+                background: transparent;
+                border: none;
+                color: white;
+                font-size: 1.2rem;
+                cursor: pointer;
+            ">—</button>
         </div>
-        
-        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; justify-content: center; flex-wrap: wrap;">
-            <button id="read-question-btn" onclick="readQuestion()" style="
-                background: #4caf50;
-                color: white;
-                border: none;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 0.9rem;
-                font-weight: bold;
-            ">📖 Question</button>
-            
-            <button id="read-options-btn" onclick="readAllOptions()" style="
-                background: #ff9800;
-                color: white;
-                border: none;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 0.9rem;
-                font-weight: bold;
-            ">📝 Options</button>
-            
-            <button id="read-all-btn" onclick="readQuestionAndOptions()" style="
-                background: #9c27b0;
-                color: white;
-                border: none;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 0.9rem;
-                font-weight: bold;
-            ">🔍 Read All</button>
-        </div>
-        
-        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; justify-content: center;">
-            <button id="play-pause-btn" onclick="toggleReading()" style="
-                background: #2196f3;
-                color: white;
-                border: none;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 0.9rem;
-                font-weight: bold;
-            ">▶️ Play</button>
-            
-            <button id="stop-btn" onclick="stopReading()" style="
-                background: #f44336;
-                color: white;
-                border: none;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 0.9rem;
-                font-weight: bold;
-            ">⏹️ Stop</button>
-        </div>
-        
-        <div style="margin-bottom: 0.5rem;">
-            <label style="font-size: 0.8rem; color: #666; display: block; margin-bottom: 0.2rem;">Speed:</label>
-            <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="1" 
-                   onchange="changeVoiceSpeed(this.value)" style="width: 100%;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #999;">
-                <span>Slow</span><span>Fast</span>
+
+        <!-- CONTENT -->
+        <div id="voice-panel-content" style="padding: 1rem;">
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button id="read-question-btn" onclick="readQuestion()" style="background:#4caf50;color:white;border:none;padding:0.5rem 1rem;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:bold;">📖 Question</button>
+                <button id="read-options-btn" onclick="readAllOptions()" style="background:#ff9800;color:white;border:none;padding:0.5rem 1rem;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:bold;">📝 Options</button>
+                <button id="read-all-btn" onclick="readQuestionAndOptions()" style="background:#9c27b0;color:white;border:none;padding:0.5rem 1rem;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:bold;">🔍 Read All</button>
             </div>
-        </div>
-        
-        <div>
-            <label style="font-size: 0.8rem; color: #666; display: block; margin-bottom: 0.2rem;">Volume:</label>
-            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" 
-                   onchange="changeVoiceVolume(this.value)" style="width: 100%;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #999;">
-                <span>Quiet</span><span>Loud</span>
+            
+            <div style="display:flex;gap:0.5rem;margin-bottom:1rem;justify-content:center;">
+                <button id="play-pause-btn" onclick="toggleReading()" style="background:#2196f3;color:white;border:none;padding:0.5rem 1rem;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:bold;">▶️ Play</button>
+                <button id="stop-btn" onclick="stopReading()" style="background:#f44336;color:white;border:none;padding:0.5rem 1rem;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:bold;">⏹️ Stop</button>
+            </div>
+            
+            <div style="margin-bottom:0.5rem;">
+                <label style="font-size:0.8rem;color:#666;display:block;margin-bottom:0.2rem;">Speed:</label>
+                <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="1" 
+                    onchange="changeVoiceSpeed(this.value)" style="width:100%;">
+                <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#999;">
+                    <span>Slow</span><span>Fast</span>
+                </div>
+            </div>
+            
+            <div>
+                <label style="font-size:0.8rem;color:#666;display:block;margin-bottom:0.2rem;">Volume:</label>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" 
+                    onchange="changeVoiceVolume(this.value)" style="width:100%;">
+                <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#999;">
+                    <span>Quiet</span><span>Loud</span>
+                </div>
             </div>
         </div>
     `;
-    
+
     document.body.appendChild(controlPanel);
+
+    // === DRAG FUNCTIONALITY ===
+    const header = document.getElementById("voice-panel-header");
+    let isDragging = false, offsetX = 0, offsetY = 0;
+
+    header.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        offsetX = e.clientX - controlPanel.offsetLeft;
+        offsetY = e.clientY - controlPanel.offsetTop;
+        document.addEventListener("mousemove", onMouseMove);
+        document.addEventListener("mouseup", onMouseUp);
+    });
+
+    function onMouseMove(e) {
+        if (!isDragging) return;
+        controlPanel.style.left = e.clientX - offsetX + "px";
+        controlPanel.style.top = e.clientY - offsetY + "px";
+        controlPanel.style.right = "auto"; // disable fixed right after drag
+    }
+
+    function onMouseUp() {
+        isDragging = false;
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+    }
+
+    // === MINIMIZE TOGGLE ===
+    const minimizeBtn = document.getElementById("minimize-btn");
+    const content = document.getElementById("voice-panel-content");
+    let minimized = false;
+
+    minimizeBtn.addEventListener("click", () => {
+        minimized = !minimized;
+        content.style.display = minimized ? "none" : "block";
+        minimizeBtn.textContent = minimized ? "+" : "—";
+    });
 }
 
 function addVoiceButtonsToContent() {
